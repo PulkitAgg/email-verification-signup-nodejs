@@ -8,8 +8,8 @@ let transporter = nodemailer.createTransport({
   secure: false,
   port: 25,
   auth: {
-    user: 'project.test02468@gmail.com',
-    pass: 'pulkitagg1010'
+    user: 'yourmailId',
+    pass: 'yourmailIdPassword'
   },
   tls: {
     rejectUnauthorized: false
@@ -27,7 +27,7 @@ exports.signup = function(req, res) {
   let link = "http://localhost:8888/api/verification/" + temptoken;
   console.log(link);
   let HelperOption = {
-    from: '"Test Project" <project.test02468@gmail.com',
+    from: '"Test Project" <yourmailId',
     to: req.body.email,
     subject: 'Verify Your Mail Id',
     text: 'Please click on this link ' + link
