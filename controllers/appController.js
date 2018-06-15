@@ -6,7 +6,7 @@ var jwt = require('jsonwebtoken');
 let transporter = nodemailer.createTransport({
   service: 'gmail',
   secure: false,
-  port: 25,
+  port: 587,
   auth: {
     user: 'yourmailId',
     pass: 'yourmailIdPassword'
